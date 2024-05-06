@@ -16,7 +16,13 @@ jobs:
       - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: latest
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
 
       - name: Print a message
-        run: echo "Hello, world!"
+        run: echo "Hello, Udacity Learner. Great job successfully running this workflow!"
